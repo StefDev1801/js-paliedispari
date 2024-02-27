@@ -1,28 +1,33 @@
+//console.log('ou');
 //- Chiedere all’utente di inserire una parola Creare una funzione per capire se la parola inserita è palindroma
 
-console.log('ou');
 const userWord = 'bob'
 console.log(userWord);
 let firsLetter;
 let lastLetter;
+const parolaDritta = []
+const parolaRovescio = []
 let palindromeCounter = 0;
 
-if (userWord.length % 2 == 1) {
+
     for (let index = 0; index < userWord.length; index++) {
         firsLetter = userWord[index];
-        console.log(firsLetter);
+        // console.log(firsLetter);
+        parolaDritta.push(firsLetter)
         
     }
-    for (let index = userWord.length; index >= 0 ; index--) {
+    for (let index = userWord.length-1; index >= 0 ; index--) {
             lastLetter = userWord[index];
-            console.log(lastLetter);
+            parolaRovescio.push(lastLetter)
+            // console.log(lastLetter);
         }
-    if (firsLetter == lastLetter) {
-    palindromeCounter++
-    
-}
-}console.log(palindromeCounter);
-console.log(userWord.length);
+    console.log(parolaDritta);
+    console.log(parolaRovescio);
+    if (parolaDritta === parolaRovescio) {
+        console.log('la tua parola è palindroma');
+    }else{
+        console.log('la tua parola non è palindroma');
+    }
 /*if (palindromeCounter == userWord.length) {
     console.log('The word IS palindrome');
 }else{
